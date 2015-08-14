@@ -1,0 +1,67 @@
+[
+  {
+    "number": 2,
+    "bgColor": "#eee4da",
+    "lbColor": "#776e65"
+  },
+  {
+    "number": 4,
+    "bgColor": "#ede0c8",
+    "lbColor": "#776e65"
+  },
+  {
+    "number": 8,
+    "bgColor": "#f2b179",
+    "lbColor": "#f9f6f2"
+  },
+  {
+    "number": 16,
+    "bgColor": "#f59563",
+    "lbColor": "#f9f6f2"
+  },
+  {
+    "number": 32,
+    "bgColor": "#f67c5f",
+    "lbColor": "#f9f6f2"
+  },
+  {
+    "number": 64,
+    "bgColor": "#f65e3b",
+    "lbColor": "#f9f6f2"
+  },
+  {
+    "number": 128,
+    "bgColor": "#edcf72",
+    "lbColor": "#f9f6f2"
+  },
+  {
+    "number": 256,
+    "bgColor": "#edcf72",
+    "lbColor": "#f9f6f2",
+    "fontSize": 24
+  },
+  {
+    "number": 512,
+    "bgColor": "#edc850",
+    "lbColor": "#f9f6f2",
+    "fontSize": 24
+  },
+  {
+    "number": 1024,
+    "bgColor": "#edc53f",
+    "lbColor": "#f9f6f2",
+    "fontSize": 19
+  },
+  {
+    "number": 2048,
+    "bgColor": "#edc22e",
+    "lbColor": "#f9f6f2",
+    "fontSize": 19
+  },
+  {
+    "number": "other",
+    "bgColor": "#3c3a32",
+    "lbColor": "#f9f6f2",
+    "fontSize": 16
+  }
+]
