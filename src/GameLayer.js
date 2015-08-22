@@ -12,8 +12,7 @@ var GameLayer = cc.Layer.extend({
         this._board.y = cc.winSize.height/2;
         this.addChild(this._board);
 
-        var t = new Tile(this._board.randomAvailableCell(), 4)
-        this._board.insertTile(t);
+        this.createTiles(2);
 
         cc.eventManager.addListener({
             event: cc.EventListener.KEYBOARD,
@@ -21,19 +20,43 @@ var GameLayer = cc.Layer.extend({
                     switch(key) {
                         case KEY_LEFT_CODE:
                             self.move('left');
+                            self.createTiles(1);
                             break;
                         case KEY_RIGHT_CODE:
                             self.move('right');
+                            self.createTiles(1);
                             break;
                         case KEY_UP_CODE:
                             self.move('up');
+                            self.createTiles(1);
                             break;
                         case KEY_DOWN_CODE:
                             self.move('down');
+                            self.createTiles(1);
                             break;
                         }
                 },
         }, this);
+    },
+
+    createTiles: function(numberOfTile) {
+        if(!this._board.cellsAvailable()) {
+            alert("GAME OVER!");
+        } else {
+            for ( var i = 0; i< numberOfTile; i++) {
+                var t = new Tile(this._board.randomAvailableCell(), this.randomTileNumber());
+                this._board.insertTile(t);
+            }
+        }
+    },
+
+    randomTileNumber: function() {
+        var number = 0;
+        var r = Math.random();
+        if (r < 0.9) number = 2;
+        if (r >= 0.9) number = 4;
+
+        return number;
     },
 
     move: function(direction) {

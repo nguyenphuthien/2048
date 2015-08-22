@@ -17,7 +17,6 @@ var Board = cc.Sprite.extend({
 
     randomAvailableCell: function() {
         var cells = this.availableCells();
-
         if (cells.length) {
             return cells[Math.floor(Math.random() * cells.length)];
         }
@@ -43,7 +42,7 @@ var Board = cc.Sprite.extend({
         for (var x = 0; x < BOARD_SIZE; x++)
             for (var y = 0; y < BOARD_SIZE; y++)
                 callback(x, y, this._cells[x][y]);
-    },    
+    },
 
     availableCells: function() {
         var cells = [];
