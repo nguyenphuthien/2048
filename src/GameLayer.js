@@ -73,9 +73,16 @@ var GameLayer = cc.Layer.extend({
 
                 if (tile) {
                     var positions = this._board.findFarthestPosition(cell, vector);
-                    // var next = this.board.cellContent(positions.next);
+                    var next = this._board.cellContent(positions.next);
+                    if (next && next.value === tile.value) {
+                        var pos = {xPos: next.xPos, yPos: next.yPos};
+                        var t = new Tile(pos, next.value*2);
+                        this._board.removeTile(tile);
+                        this._board.removeTile(next);
+                        this._board.insertTile(t);
+                    } else
+                        this._board.moveTile(tile, positions.farthest);
 
-                    this._board.moveTile(tile, positions.farthest);
                 }
             }
         }

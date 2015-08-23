@@ -29,7 +29,7 @@ var Board = cc.Sprite.extend({
 
     removeTile: function(tile) {
         this._cells[tile.xPos][tile.yPos] = null;
-        tile.removeFromParentAndCleanup(true);
+        tile.removeFromParent();
     },
 
     moveTile: function(tile, cell) {
